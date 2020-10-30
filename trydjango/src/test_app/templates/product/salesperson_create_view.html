@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Salesperson Create</title>
+    <link rel="stylesheet"  href="{% static 'case_create.css' %}" />
+</head>
+<body>
+<div class="title"> Please create Salesperson here. </div>
+<div id="list">
+<input type="button" id="btn_insert" value="Back" onclick="javascrtpt:window.location.href='/salespersonlist'"/>
+<form action='.' method="POST" >{% csrf_token %}
+	<p><label class="label_input">Name</label> {{form.name}}</p>
+	<p><label class="label_input">Email</label> {{form.email}}</p>
+	<p><label class="label_input">Job Title</label> {{form.job_title}}</p>
+	<p><p><label class="label_input">Product</label> {{form.product_sell}}</p>
+    <input type="submit" value="Save" id="btn_save"/>
+</form>
+</div>
+
+</body>
+</html>
