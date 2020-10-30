@@ -1,0 +1,10 @@
+<h1> Customer Update View</h1>
+<input type="button" id="btn_insert" value="Back" onclick="javascrtpt:window.location.href='/customerlist'"/>
+<form action='.' method="POST">{% csrf_token %}
+	<p>Customer: {{form.customer_relate}}</p>
+	<p>Name: {{form.name}}</p>
+	<p>Address: {{form.address}}</p>
+	<p>Annual Income: {{form.cga_income}}</p>
+	<p>Company: {{form.company}}</p>
+	<input type="submit" value="Save" onclick="javascrtpt:window.location.href='/customerlist'"/>
+</form>
